@@ -83,21 +83,6 @@ public class CreateNewOpportunityPage {
 		wUtils.switchToWindow(driver, parentPageTitle);
 	}
 
-	public void enterExpectedCloseDate(int year, String month, int date) {
-		expectedCloseDateIcon.click();
-		while (true) {
-			String text = driver.findElement(By.xpath("//td[@class='title']")).getText();
-			String[] arr = text.split(",");
-			String monthDisplayed = arr[0];
-			int yearDisplayed = Integer.parseInt(arr[1].substring(1));
-			if (monthDisplayed.equals(month) && yearDisplayed == year)
-				break;
-			else
-				driver.findElement(By.xpath("//td[text()='‹']")).click();
-		}
-		driver.findElement(By.xpath("//td[text()='" + date + "']")).click();
-	}
-
 	public void clickOnSaveButton() {
 		saveButton.click();
 	}

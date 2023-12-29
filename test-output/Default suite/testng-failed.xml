@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="campaigns_module.CreateCampaignTest">
+      <class name="opportunities_module.CreateOpportunityTest">
         <methods>
           <include name="acConfig"/>
           <include name="amConfig"/>
           <include name="bmConfig"/>
-          <include name="createNewCampaignAndVerifyTest"/>
           <include name="bcConfig"/>
           <include name="bsConfig"/>
           <include name="asConfig"/>
+          <include name="createOpportunityAndVerifyTest"/>
         </methods>
-      </class> <!-- campaigns_module.CreateCampaignTest -->
+      </class> <!-- opportunities_module.CreateOpportunityTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

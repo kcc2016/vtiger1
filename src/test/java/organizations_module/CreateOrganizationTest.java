@@ -25,7 +25,8 @@ public class CreateOrganizationTest extends BaseClass {
 		org.clickOnPlusButton();
 		System.out.println("the user has clicked on plus button to create organization");
 
-		String organizationName = eUtils.fetchStringDataFromExcelFile(IPathConstant.ORGANIZATIONS_SHEET_NAME, 1, 0);
+		String organizationName = eUtils.fetchStringDataFromExcelFile(IPathConstant.ORGANIZATIONS_SHEET_NAME, 1, 0)
+				+ jUtils.generateRandomNumber(5000);
 
 		createOrg = new CreateNewOrganizationPage(driver);
 		createOrg.enterOrganizationName(organizationName);

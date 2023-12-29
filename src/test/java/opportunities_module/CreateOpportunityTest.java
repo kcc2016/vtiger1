@@ -28,14 +28,10 @@ public class CreateOpportunityTest extends BaseClass {
 		String organizationName = eUtils.fetchStringDataFromExcelFile(IPathConstant.OPPORTUNITIES_SHEET_NAME, 3, 0);
 		String organizationPopupTitlePartial = eUtils
 				.fetchStringDataFromExcelFile(IPathConstant.OPPORTUNITIES_SHEET_NAME, 3, 1);
-		int year = eUtils.fetchNumericDataFromExcelFile(IPathConstant.OPPORTUNITIES_SHEET_NAME, 5, 1);
-		String month = eUtils.fetchStringDataFromExcelFile(IPathConstant.OPPORTUNITIES_SHEET_NAME, 5, 2);
-		int date = eUtils.fetchNumericDataFromExcelFile(IPathConstant.OPPORTUNITIES_SHEET_NAME, 5, 3);
 
 		createOpportunity = new CreateNewOpportunityPage(driver);
 		createOpportunity.enterOpportunityName(opportunityName);
 		createOpportunity.enterOrganizationDetails(organizationName, organizationPopupTitlePartial);
-		createOpportunity.enterExpectedCloseDate(year, month, date);
 		System.out.println(createOpportunity.getExpectedCloseDateTextField().getAttribute("value"));
 		createOpportunity.clickOnSaveButton();
 		System.out.println("the user has saved opportunity details");

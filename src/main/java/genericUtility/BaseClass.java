@@ -34,6 +34,7 @@ public class BaseClass {
 	public FileUtility fUtils = new FileUtility();
 	public WebDriverUtility wUtils = new WebDriverUtility();
 	public ExcelUtility eUtils = new ExcelUtility();
+	public JavaUtility jUtils = new JavaUtility();
 	public WebDriver driver;
 	public LoginPage lp;
 	public HomePage hp;
